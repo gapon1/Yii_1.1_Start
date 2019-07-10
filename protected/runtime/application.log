@@ -391,3 +391,20 @@ Stack trace:
 #12 {main}
 REQUEST_URI=/index.php/site/test
 ---
+2019/07/10 19:03:37 [error] [php] Undefined variable: script (/Users/pro/projects/recapcha/protected/views/site/test.php:3)
+Stack trace:
+#0 /Users/pro/projects/recapcha/framework/web/CController.php(872): SiteController->renderFile()
+#1 /Users/pro/projects/recapcha/framework/web/CController.php(785): SiteController->renderPartial()
+#2 /Users/pro/projects/recapcha/protected/controllers/SiteController.php(116): SiteController->render()
+#3 /Users/pro/projects/recapcha/framework/web/actions/CInlineAction.php(49): SiteController->actionTest()
+#4 /Users/pro/projects/recapcha/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/pro/projects/recapcha/framework/web/CController.php(286): SiteController->runAction()
+#6 /Users/pro/projects/recapcha/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /Users/pro/projects/recapcha/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /Users/pro/projects/recapcha/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/pro/projects/recapcha/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /Users/pro/projects/recapcha/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/test
+in /Users/pro/projects/recapcha/protected/views/site/test.php (3)
+in /Users/pro/projects/recapcha/protected/controllers/SiteController.php (116)
+in /Users/pro/projects/recapcha/index.php (13)
