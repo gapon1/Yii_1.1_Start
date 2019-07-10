@@ -110,9 +110,12 @@ class SiteController extends Controller
     public function actionTest()
     {
 
-        Yii::app()->user->setFlash('success', "Data1 saved! 11111");
-
-
+        Yii::app()->user->setFlash('success', "Data1 saved!");
         $this->render('test');
+    }
+    public function actionCaptcha()
+    {
+
+        $this->render('captcha');
     }
 }
