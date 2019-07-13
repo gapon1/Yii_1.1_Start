@@ -16,6 +16,10 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+
+
+
+
 </head>
 
 <body>
@@ -32,7 +36,9 @@
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'test', 'url'=>array('/site/test')),
+				array('label'=>'Category', 'url'=>array('/category/index')),
+				array('label'=>'hapon', 'url'=>array('/hapon')),
+				array('label'=>'hapon-test', 'url'=>array('/hapon/test')),
 				array('label'=>'captcha', 'url'=>array('/site/captcha')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

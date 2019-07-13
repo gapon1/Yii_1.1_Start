@@ -5,6 +5,7 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
@@ -18,22 +19,26 @@ return array(
 		'application.components.*',
 	),
 
-	'modules'=>array(
+    'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
+    'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		/*
 		'gii'=>array(
+            'generatorPaths'=>array(
+                'bootstrap.gii',
+            ),
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'1111',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		*/
+
 	),
 
 	// application components
 	'components'=>array(
-
-
+        'bootstrap'=>array(
+            'class'=>'bootstrap.components.Bootstrap',
+        ),
         'reCaptcha' => array(
             'name' => 'reCaptcha',
             'class' => 'application.extensions.ReCaptcha',
@@ -59,10 +64,10 @@ return array(
 
 
 		'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=yii_site',
+            'connectionString' => 'mysql:host=localhost;dbname=yii2_tz_2',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'test02156',
 			'charset' => 'utf8',
 
 ),

@@ -111,11 +111,11 @@ class SiteController extends Controller
     {
 
         Yii::app()->user->setFlash('success', "Data1 saved!");
-        $this->render('test');
+        $this->render('/site/test');
     }
     public function actionCaptcha()
     {
 
-        $this->render('captcha');
+        $this->render('/site/captcha');
     }
 }

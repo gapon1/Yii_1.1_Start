@@ -2232,7 +2232,7 @@ EOD;
 				$header='<p>'.Yii::t('yii','Please fix the following input errors:').'</p>';
 			if(!isset($htmlOptions['class']))
 				$htmlOptions['class']=self::$errorSummaryCss;
-			return self::tag('div',$htmlOptions,$header."\n<ul>\n$content</ul>".$footer);
+			return self::tag('div',$htmlOptions,$header."\n<ul class='alert alert-danger'>\n$content</ul>".$footer);
 		}
 		else
 			return '';

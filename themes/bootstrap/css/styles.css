@@ -1,0 +1,9 @@
+#page {
+    padding-top: 60px;
+}
+
+div.flash-success {
+    background: #E6EFC2;
+    color: #264409;
+    border-color: #C6D880;
+}

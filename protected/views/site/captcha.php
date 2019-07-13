@@ -1,44 +1,36 @@
 <html>
 <head>
+    <script>
+        function onSubmit(token) {
+            alert('thanks ' + document.getElementById('field').value);
+            alert(token);
+        }
 
+        function validate(event) {
+            event.preventDefault();
+            if (!document.getElementById('field').value) {
+                alert("You must add text to the required field");
+            } else {
+                grecaptcha.execute();
+            }
+        }
+
+        function onload() {
+            var element = document.getElementById('submit');
+            element.onclick = validate;
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-
-
-
-
-<script type="text/javascript">
-
-
-
-    var verifyCallback = function(token) {
-        alert(token);
-    };
-
-    var widgetId2;
-
-
-    var onloadCallback = function() {
-        widgetId2 = grecaptcha.render(document.getElementById('example2'), {
-            'sitekey' : '6LevlqsUAAAAAPmH7Xm2cW0S2S3PymOm6FhuaWni',
-            'callback' : verifyCallback,
-            'theme' : 'light'
-        });
-
-        grecaptcha.reset(widgetId2);
-    };
-
-
-</script>
-
-<form action="?" method="POST">
-    <div id="example2"></div>
-    <br>
-    <input type="submit" value="Submit">
+<form>
+    Name: (required) <input id="field" name="field">
+    <div id='recaptcha' class="g-recaptcha"
+         data-sitekey="6LevlqsUAAAAAPmH7Xm2cW0S2S3PymOm6FhuaWni"
+         data-callback="onSubmit"
+         data-size="invisible"></div>
+    <button id='submit'>submit</button>
 </form>
-
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-</script>
+<script>onload();</script>
 </body>
 </html>
