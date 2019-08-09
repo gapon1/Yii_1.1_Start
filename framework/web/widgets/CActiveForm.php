@@ -559,7 +559,7 @@ class CActiveForm extends CWidget
 			if(!isset($htmlOptions['class']))
 				$htmlOptions['class']=CHtml::$errorSummaryCss;
 			$htmlOptions['style']=isset($htmlOptions['style']) ? rtrim($htmlOptions['style'],';').';display:none' : 'display:none';
-			$html=CHtml::tag('div',$htmlOptions,$header."\n<ul><li>dummy</li></ul>".$footer);
+			$html=CHtml::tag('div',$htmlOptions,$header."\n<ul class='alert alert-danger' role='alert'><li>dummy</li></ul>".$footer);
 		}
 
 		$this->summaryID=$htmlOptions['id'];

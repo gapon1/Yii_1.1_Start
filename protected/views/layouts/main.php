@@ -33,8 +33,6 @@
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'test', 'url'=>array('/site/test')),
-				array('label'=>'view', 'url'=>array('/site/view')),
-				array('label'=>'viewContent', 'url'=>array('/site/viewcont')),
 				array('label'=>'captcha', 'url'=>array('/site/captcha')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
