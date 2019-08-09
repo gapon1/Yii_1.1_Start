@@ -58,6 +58,11 @@ body
 	margin:0px;
 }
 
+.card{
+	width: 18rem!important;
+	margin: 0 auto;
+}
+
 #mainmenu ul li
 {
 	display: inline;
