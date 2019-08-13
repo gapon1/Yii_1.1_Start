@@ -38,7 +38,7 @@
 <?php endforeach; ?>
 
 
-
+<p>some text</p>
 
 </body>
 </html>
