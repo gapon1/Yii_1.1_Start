@@ -18,27 +18,15 @@
 </head>
 <body>
 
-<div class="card__thumbnail">
-    <img class="card__img lazy" data-src="../../../requirements/image/botstrap4.jpeg" alt="test">
-</div>
+
+<?php
+
+$this->widget('ext.haponWidget.haponwidget');
+
+?>
 
 
-
-<?php foreach ($model as $item) : ?>
-<div class="card">
-    <img class="card-img-top" src="../../../requirements/image/<?= $item['image']?>" alt="Card image cap">
-    <div class="card-body">
-        <p><?= $item['id']?></p>
-        <h5 class="card-title"><?= $item['title']?></h5>
-        <p class="card-text"><?= $item['description']?></p>
-        <a href="#" class="btn btn-primary"><?= $item['date']?></a>
-    </div>
-</div>
-    <br/>
-<?php endforeach; ?>
-
-
-<p>some text</p>
+<h1>some text</h1>
 
 </body>
 </html>

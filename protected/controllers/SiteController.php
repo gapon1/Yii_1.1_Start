@@ -131,12 +131,7 @@ class SiteController extends Controller
     }
     public function actionViewcont()
     {
-        $model= TblContent::model()->findAll(array(
-            'select' => 'id, title, description, image, date',
-        ));
-        $this->render('viewcont',
-            ['model' => $model]
-        );
+        $this->render('viewcont');
     }
 
     public function actionCaptcha()
